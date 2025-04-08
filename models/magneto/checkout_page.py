@@ -54,7 +54,3 @@ class CheckoutPage:
 
     def place_order_button(self):
         self.place_order_btn.click()
-
-#     page.get_by_role("button", name="Place Order").click()
-#     page.get_by_text("Thank you for your purchase!").click()
-#     page.get_by_text("000048116").click()

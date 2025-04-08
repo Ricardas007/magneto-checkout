@@ -10,11 +10,8 @@ class NavbarPage:
         self.womens_pants_menu = page.get_by_role("menuitem", name="Pants")
 
     def hover_over_men(self):
-        # self.men_menu_btn.wait_for(state="visible", timeout=500)
         self.men_menu_btn.hover()
-        # self.tops_menu_btn.wait_for(state="visible")
         self.tops_menu_btn.hover()
-        # self.hoodies_and_sweatshirts_menu_btn.wait_for(state="visible")
         self.hoodies_and_sweatshirts_menu_btn.click()
 
     def hover_over_women(self):

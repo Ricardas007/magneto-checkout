@@ -7,6 +7,7 @@ from models.magneto.mini_cart_page import MiniCartPage
 from models.magneto.checkout_page import CheckoutPage
 
 from playwright.sync_api import Page, expect
+
 # Scenario one:
 # ▪ Using navigation menu, find mens Hoodies & Sweatshirts section.
 # ▪ Check/Assert that the displayed number of jackets matches the selected
@@ -98,7 +99,6 @@ def test_scenario_two(page: Page) -> None:
     expect(header_page.basket_counter).to_have_text("3")
     header_page.cart_icon()
     mini_cart_page = MiniCartPage(page)
-    # page.pause()
     mini_cart_page.delete_item_from_cart()
     mini_cart_page.confirm_or_cansel_item_from_cart("OK")
     expect(header_page.basket_counter).to_have_text("2")
@@ -125,12 +125,3 @@ def test_scenario_two(page: Page) -> None:
     checkout_page.next_button()
     checkout_page.place_order_button()
     expect(checkout_page.page_title).to_have_text("Thank you for your purchase!")
-
-
-    # count and filter the cheapest product by price range
-    # prices = products_page.count_all_prices()
-    # expect(len(prices) > 0, "No prices found")
-
-
-    # page.get_by_role("link", name=" Set Ascending Direction").click()
-    # page.get_by_role("link", name="Emma Leggings").first.click(button="right")

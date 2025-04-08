@@ -34,7 +34,5 @@ class ProductPage:
     def select_item_from_suggested(self, select_item):
         self.suggested_list_items.nth(select_item).click()
 
-         # get_by_role("spinbutton", name="Qty").fill("3"))
-        # .input-text.qty
 
 

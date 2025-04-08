@@ -1,7 +1,6 @@
 class MiniCartPage:
     def __init__(self, page):
         self.page = page
-        # self.mini_cart_product_name = page.locator("#mini-cart")
         self.minicart_product_name = page.locator(".block-minicart .product-item-name")
         self.minicart_delete_item_btn = page.get_by_role("link", name=" Remove")
         self.minicart_checkout_btn = page.get_by_role("button", name="Proceed to Checkout")
@@ -10,7 +9,6 @@ class MiniCartPage:
 
     def get_product_title(self):
         return self.minicart_product_name.text_content()
-
 
     def checkout_btn(self):
         self.minicart_checkout_btn.click()

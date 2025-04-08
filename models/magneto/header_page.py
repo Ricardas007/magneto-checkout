@@ -6,6 +6,3 @@ class HeaderPage:
 
     def cart_icon(self):
         self.basket_counter.click()
-
-
-# get_by_role("link", name="1")

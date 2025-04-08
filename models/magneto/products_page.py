@@ -22,10 +22,5 @@ class ProductsPage:
     def filter_cheapest_products_range(self):
         self.filter_cheapest_products_prices.click()
 
-    def count_all_prices(self):
-        prices = self.item_price.all_inner_texts()
-        print("Found Prices: ", prices)
-        return prices
-
     def select_cheapest_product(self):
         self.cheapest_product.click()
